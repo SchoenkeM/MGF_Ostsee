@@ -1,4 +1,4 @@
-# MGF Ostsee
+# <img src="/ressources/images/MGF-Ostsee_Logo_DE_bunt.png" width="250"> MGF Ostsee
 
 This repository is part of the MGF Ostsee project.
 
