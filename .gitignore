@@ -1,4 +1,4 @@
-/GIS/layers/raster/*.tif
+/GIS/layers/raster/
 Icon?
 .DS_Store
 *.*~
