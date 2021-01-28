@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUserFull="David Clemens" saveDateTime="2021-01-28T20:51:23" projectname="" version="3.16.3-Hannover" saveUser="David">
+<qgis saveUserFull="David Clemens" saveDateTime="2021-01-29T00:44:27" projectname="" version="3.16.3-Hannover" saveUser="David">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -22,6 +22,9 @@
     <customproperties/>
     <layer-tree-group expanded="1" name="trawl marks" checked="Qt::Checked">
       <customproperties/>
+      <layer-tree-layer source="./layers/vector/Artefacts.geojson|layername=Artefacts" legend_split_behavior="0" providerKey="ogr" expanded="1" id="Artefacts_26aa5bd6_a669_4ead_bbdf_0b8fed80844e" patch_size="-1,-1" name="Artefacts" checked="Qt::Checked" legend_exp="">
+        <customproperties/>
+      </layer-tree-layer>
       <layer-tree-layer source="./layers/vector/TrawlMarks.geojson" legend_split_behavior="0" providerKey="ogr" expanded="0" id="TrawlMarks_adf02211_c27e_41ef_846c_c954d3a42695" patch_size="-1,-1" name="TrawlMarks" checked="Qt::Checked" legend_exp="">
         <customproperties/>
       </layer-tree-layer>
@@ -36,7 +39,7 @@
     </layer-tree-group>
     <layer-tree-group expanded="1" name="basemap" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer source="./layers/vector/StudyAreas.geojson|layername=StudyAreas" legend_split_behavior="0" providerKey="ogr" expanded="1" id="StudyAreas_c46afe17_1a26_432a_a270_03da96ee8572" patch_size="-1,-1" name="StudyAreas" checked="Qt::Checked" legend_exp="">
+      <layer-tree-layer source="./layers/vector/StudyAreas.geojson|layername=StudyAreas" legend_split_behavior="0" providerKey="ogr" expanded="1" id="StudyAreas_c46afe17_1a26_432a_a270_03da96ee8572" patch_size="-1,-1" name="StudyAreas" checked="Qt::Unchecked" legend_exp="">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer source="./layers/vector/Territorial Waters/TerritorialWaters.shp" legend_split_behavior="0" providerKey="ogr" expanded="0" id="TerritorialWaters_fe4eba95_2de0_41c1_a8d3_618999dfa038" patch_size="-1,-1" name="TerritorialWaters" checked="Qt::Checked" legend_exp="">
@@ -93,7 +96,7 @@
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-group expanded="1" name="bathymetry (absolute)" checked="Qt::Checked">
+      <layer-tree-group expanded="1" name="bathymetry (absolute)" checked="Qt::Unchecked">
         <customproperties/>
         <layer-tree-layer source="./layers/raster/FB_MPA_EMB238_bathymetry.tif" legend_split_behavior="0" providerKey="gdal" expanded="0" id="FB_MPA_EMB238_bathymetry_7f0c6cda_e3f2_4d01_907f_f20d03d2e9c0" patch_size="-1,-1" name="FB_MPA_EMB238_bathymetry" checked="Qt::Checked" legend_exp="">
           <customproperties/>
@@ -125,26 +128,28 @@
       <item>HELCOM_MPAs_4ab528f6_077f_4430_81d2_d453981523fa</item>
       <item>BalticSea_GlobalFishingWatch_fishingEffort_20120101_20161231_e30886c6_ae1c_4335_b219_9306651c8fb1</item>
       <item>BalticSea_bathymetry_a90e63ac_a7f6_4805_a44f_6ee3db365ebe</item>
+      <item>Artefacts_26aa5bd6_a669_4ead_bbdf_0b8fed80844e</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings self-snapping="0" mode="2" intersection-snapping="0" scaleDependencyMode="0" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12" unit="1">
     <individual-layer-settings>
-      <layer-setting id="EEZ_e2d76d01_d401_4ffb_be10_c3fa2c939f4a" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
+      <layer-setting id="TrawlMarks_adf02211_c27e_41ef_846c_c954d3a42695" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
+      <layer-setting id="TerritorialWaters_fe4eba95_2de0_41c1_a8d3_618999dfa038" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
       <layer-setting id="EMB238Stations_caa28351_360a_4227_8630_34c01c954517" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
       <layer-setting id="HELCOM_MPAs_4ab528f6_077f_4430_81d2_d453981523fa" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
-      <layer-setting id="TrawlMarks_adf02211_c27e_41ef_846c_c954d3a42695" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
+      <layer-setting id="EEZ_e2d76d01_d401_4ffb_be10_c3fa2c939f4a" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
       <layer-setting id="StudyAreas_c46afe17_1a26_432a_a270_03da96ee8572" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
-      <layer-setting id="TerritorialWaters_fe4eba95_2de0_41c1_a8d3_618999dfa038" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
+      <layer-setting id="Artefacts_26aa5bd6_a669_4ead_bbdf_0b8fed80844e" units="1" minScale="0" maxScale="0" type="1" enabled="0" tolerance="12"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>607647.90931452380027622</xmin>
-      <ymin>6044422.83496352471411228</ymin>
-      <xmax>615416.26320065243635327</xmax>
-      <ymax>6048340.08739219419658184</ymax>
+      <xmin>607697.58718861627858132</xmin>
+      <ymin>6044476.34255780465900898</ymin>
+      <xmax>615254.71075260604266077</xmax>
+      <ymax>6047074.99374682083725929</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -166,6 +171,11 @@
   <projectModels/>
   <legend updateDrawingOrder="true">
     <legendgroup open="true" name="trawl marks" checked="Qt::Checked">
+      <legendlayer showFeatureCount="0" open="true" drawingOrder="-1" name="Artefacts" checked="Qt::Checked">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile layerid="Artefacts_26aa5bd6_a669_4ead_bbdf_0b8fed80844e" visible="1" isInOverview="0"/>
+        </filegroup>
+      </legendlayer>
       <legendlayer showFeatureCount="0" open="false" drawingOrder="-1" name="TrawlMarks" checked="Qt::Checked">
         <filegroup hidden="false" open="false">
           <legendlayerfile layerid="TrawlMarks_adf02211_c27e_41ef_846c_c954d3a42695" visible="1" isInOverview="0"/>
@@ -180,9 +190,9 @@
       </legendlayer>
     </legendgroup>
     <legendgroup open="true" name="basemap" checked="Qt::Checked">
-      <legendlayer showFeatureCount="0" open="true" drawingOrder="-1" name="StudyAreas" checked="Qt::Checked">
+      <legendlayer showFeatureCount="0" open="true" drawingOrder="-1" name="StudyAreas" checked="Qt::Unchecked">
         <filegroup hidden="false" open="true">
-          <legendlayerfile layerid="StudyAreas_c46afe17_1a26_432a_a270_03da96ee8572" visible="1" isInOverview="0"/>
+          <legendlayerfile layerid="StudyAreas_c46afe17_1a26_432a_a270_03da96ee8572" visible="0" isInOverview="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer showFeatureCount="0" open="false" drawingOrder="-1" name="TerritorialWaters" checked="Qt::Checked">
@@ -257,15 +267,15 @@
           </filegroup>
         </legendlayer>
       </legendgroup>
-      <legendgroup open="true" name="bathymetry (absolute)" checked="Qt::Checked">
+      <legendgroup open="true" name="bathymetry (absolute)" checked="Qt::Unchecked">
         <legendlayer showFeatureCount="0" open="false" drawingOrder="-1" name="FB_MPA_EMB238_bathymetry" checked="Qt::Checked">
           <filegroup hidden="false" open="false">
-            <legendlayerfile layerid="FB_MPA_EMB238_bathymetry_7f0c6cda_e3f2_4d01_907f_f20d03d2e9c0" visible="1" isInOverview="0"/>
+            <legendlayerfile layerid="FB_MPA_EMB238_bathymetry_7f0c6cda_e3f2_4d01_907f_f20d03d2e9c0" visible="0" isInOverview="0"/>
           </filegroup>
         </legendlayer>
         <legendlayer showFeatureCount="0" open="false" drawingOrder="-1" name="FB_control_EMB238_bathymetry" checked="Qt::Checked">
           <filegroup hidden="false" open="false">
-            <legendlayerfile layerid="FB_control_EMB238_bathymetry_45c42559_cd7a_46d0_bfa5_1a9891f05d25" visible="1" isInOverview="0"/>
+            <legendlayerfile layerid="FB_control_EMB238_bathymetry_45c42559_cd7a_46d0_bfa5_1a9891f05d25" visible="0" isInOverview="0"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -370,7 +380,7 @@
         <description></description>
         <projectionacronym></projectionacronym>
         <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>false</geographicflag>
+        <geographicflag>true</geographicflag>
       </spatialrefsys>
     </srs>
     <resourceMetadata>
@@ -393,7 +403,7 @@
           <description></description>
           <projectionacronym></projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>true</geographicflag>
+          <geographicflag>false</geographicflag>
         </spatialrefsys>
       </crs>
       <extent/>
@@ -402,6 +412,291 @@
     <layerOpacity>1</layerOpacity>
   </main-annotation-layer>
   <projectlayers>
+    <maplayer simplifyDrawingHints="1" simplifyAlgorithm="0" labelsEnabled="0" maxScale="0" simplifyDrawingTol="1" wkbType="MultiPolygon" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" minScale="100000000" refreshOnNotifyEnabled="0" simplifyLocal="1" simplifyMaxScale="1" geometry="Polygon" readOnly="0" autoRefreshTime="0" autoRefreshEnabled="0" styleCategories="AllStyleCategories" type="vector">
+      <extent>
+        <xmin>10.66818721477068443</xmin>
+        <ymin>54.53688392568577825</ymin>
+        <xmax>10.77859523342326753</xmax>
+        <ymax>54.55755628490433651</ymax>
+      </extent>
+      <id>Artefacts_26aa5bd6_a669_4ead_bbdf_0b8fed80844e</id>
+      <datasource>./layers/vector/Artefacts.geojson|layername=Artefacts</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Artefacts</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial minz="0" crs="" maxz="0" dimensions="2" maxx="0" minx="0" miny="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal mode="0" startField="" endExpression="" startExpression="" endField="" durationUnit="min" durationField="" fixedDuration="0" accumulate="0" enabled="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <renderer-v2 symbollevels="0" enableorderby="0" type="singleSymbol" forceraster="0">
+        <symbols>
+          <symbol force_rhr="0" clip_to_extent="1" name="0" alpha="1" type="fill">
+            <layer pass="0" class="SimpleFill" locked="0" enabled="1">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="227,26,28,103"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"id"</value>
+        </property>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory barWidth="5" minimumSize="0" enabled="0" sizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" rotationOffset="270" sizeType="MM" scaleDependency="Area" penColor="#000000" penAlpha="255" maxScaleDenominator="1e+08" spacingUnitScale="3x:0,0,0,0,0,0" lineSizeType="MM" showAxis="1" height="15" minScaleDenominator="0" direction="0" opacity="1" spacingUnit="MM" penWidth="0" scaleBasedVisibility="0" diagramOrientation="Up" spacing="5" backgroundColor="#ffffff" backgroundAlpha="255" width="15" lineSizeScale="3x:0,0,0,0,0,0">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <axisSymbol>
+            <symbol force_rhr="0" clip_to_extent="1" name="" alpha="1" type="line">
+              <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+                <prop k="align_dash_pattern" v="0"/>
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="dash_pattern_offset" v="0"/>
+                <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <prop k="dash_pattern_offset_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="35,35,35,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0.26"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="ring_filter" v="0"/>
+                <prop k="tweak_dash_pattern_on_corners" v="0"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <data_defined_properties>
+                  <Option type="Map">
+                    <Option value="" name="name" type="QString"/>
+                    <Option name="properties"/>
+                    <Option value="collection" name="type" type="QString"/>
+                  </Option>
+                </data_defined_properties>
+              </layer>
+            </symbol>
+          </axisSymbol>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings zIndex="0" placement="1" priority="0" linePlacementFlags="18" obstacle="0" dist="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option value="" name="name" type="QString"/>
+            <Option name="properties"/>
+            <Option value="collection" name="type" type="QString"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration type="Map">
+          <Option name="QgsGeometryGapCheck" type="Map">
+            <Option value="0" name="allowedGapsBuffer" type="double"/>
+            <Option value="false" name="allowedGapsEnabled" type="bool"/>
+            <Option value="" name="allowedGapsLayer" type="QString"/>
+          </Option>
+        </checkConfiguration>
+      </geometryOptions>
+      <legend type="default-vector"/>
+      <referencedLayers/>
+      <fieldConfiguration>
+        <field configurationFlags="None" name="id">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="type">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="morphology">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="id" name="" index="0"/>
+        <alias field="type" name="" index="1"/>
+        <alias field="morphology" name="" index="2"/>
+      </aliases>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="id"/>
+        <default applyOnUpdate="0" expression="" field="type"/>
+        <default applyOnUpdate="0" expression="" field="morphology"/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" exp_strength="0" notnull_strength="0" constraints="0" field="id"/>
+        <constraint unique_strength="0" exp_strength="0" notnull_strength="0" constraints="0" field="type"/>
+        <constraint unique_strength="0" exp_strength="0" notnull_strength="0" constraints="0" field="morphology"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="type" exp="" desc=""/>
+        <constraint field="morphology" exp="" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="1" sortExpression="&quot;id&quot;">
+        <columns>
+          <column hidden="0" width="-1" name="id" type="field"/>
+          <column hidden="0" width="-1" name="type" type="field"/>
+          <column hidden="1" width="-1" type="actions"/>
+          <column hidden="0" width="-1" name="morphology" type="field"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field name="id" editable="1"/>
+        <field name="morphology" editable="1"/>
+        <field name="type" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="id"/>
+        <field labelOnTop="0" name="morphology"/>
+        <field labelOnTop="0" name="type"/>
+      </labelOnTop>
+      <dataDefinedFieldProperties/>
+      <widgets/>
+      <previewExpression>"id"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
     <maplayer autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" minScale="1e+08" styleCategories="AllStyleCategories" maxScale="0" refreshOnNotifyMessage="" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>9.41000000000000014</xmin>
@@ -448,7 +743,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent/>
@@ -581,7 +876,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -794,7 +1089,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -1139,7 +1434,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -1965,7 +2260,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2006,7 +2301,7 @@ def my_form_open(dialog, layer, feature):
         <provider>
           <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" maxOversampling="2" enabled="false"/>
         </provider>
-        <rasterrenderer multidirection="0" azimuth="45" alphaBand="-1" opacity="1" nodataColor="" angle="45" type="hillshade" band="1" zfactor="5">
+        <rasterrenderer multidirection="0" azimuth="315" alphaBand="-1" opacity="1" nodataColor="" angle="45" type="hillshade" band="1" zfactor="5">
           <rasterTransparency/>
           <minMaxOrigin>
             <limits>None</limits>
@@ -2079,7 +2374,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2292,7 +2587,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2344,7 +2639,7 @@ def my_form_open(dialog, layer, feature):
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
           <rastershader>
-            <colorrampshader colorRampType="INTERPOLATED" clip="0" labelPrecision="4" classificationMode="1" maximumValue="360" minimumValue="0">
+            <colorrampshader colorRampType="DISCRETE" clip="0" labelPrecision="0" classificationMode="2" maximumValue="360" minimumValue="0">
               <colorramp name="[source]" type="gradient">
                 <prop k="color1" v="168,120,13,255"/>
                 <prop k="color2" v="168,120,13,255"/>
@@ -2352,26 +2647,18 @@ def my_form_open(dialog, layer, feature):
                 <prop k="rampType" v="gradient"/>
                 <prop k="stops" v="0.0526316;187,107,36,255:0.105263;202,92,58,255:0.157895;214,75,84,255:0.210526;221,56,117,255:0.263158;222,40,157,255:0.31579;213,42,197,255:0.368421;195,62,226,255:0.421053;172,84,241,255:0.473684;143,105,244,255:0.526316;109,122,234,255:0.578947;72,136,213,255:0.631579;42,144,186,255:0.684211;26,149,159,255:0.736842;14,152,132,255:0.789474;19,154,101,255:0.842105;59,153,61,255:0.894737;108,144,23,255:0.947368;142,133,13,255"/>
               </colorramp>
-              <item label="0,0000" value="0" color="#a8780d" alpha="255"/>
-              <item label="18,9474" value="18.947376" color="#bb6b24" alpha="255"/>
-              <item label="37,8947" value="37.89468" color="#ca5c3a" alpha="255"/>
-              <item label="56,8422" value="56.842200000000005" color="#d64b54" alpha="255"/>
-              <item label="75,7894" value="75.78936" color="#dd3875" alpha="255"/>
-              <item label="94,7369" value="94.73688" color="#de289d" alpha="255"/>
-              <item label="113,6844" value="113.68440000000001" color="#d52ac5" alpha="255"/>
-              <item label="132,6316" value="132.63156" color="#c33ee2" alpha="255"/>
-              <item label="151,5791" value="151.57908" color="#ac54f1" alpha="255"/>
-              <item label="170,5262" value="170.52624" color="#8f69f4" alpha="255"/>
-              <item label="189,4738" value="189.47376" color="#6d7aea" alpha="255"/>
-              <item label="208,4209" value="208.42092" color="#4888d5" alpha="255"/>
-              <item label="227,3684" value="227.36844" color="#2a90ba" alpha="255"/>
-              <item label="246,3160" value="246.31596000000002" color="#1a959f" alpha="255"/>
-              <item label="265,2631" value="265.26312" color="#0e9884" alpha="255"/>
-              <item label="284,2106" value="284.21064" color="#139a65" alpha="255"/>
-              <item label="303,1578" value="303.1578" color="#3b993d" alpha="255"/>
-              <item label="322,1053" value="322.10532" color="#6c9017" alpha="255"/>
-              <item label="341,0525" value="341.05248" color="#8e850d" alpha="255"/>
-              <item label="360,0000" value="360" color="#a8780d" alpha="255"/>
+              <item label="&lt;= 30°" value="30" color="#a8780d" alpha="255"/>
+              <item label="30 - 60°" value="60" color="#c66034" alpha="255"/>
+              <item label="60 - 90°" value="90" color="#da4263" alpha="255"/>
+              <item label="90 - 120°" value="120" color="#dd28a4" alpha="255"/>
+              <item label="120 - 150°" value="150" color="#c53ce0" alpha="255"/>
+              <item label="150 - 180°" value="180" color="#9a61f3" alpha="255"/>
+              <item label="180 - 210°" value="210" color="#5f7fe3" alpha="255"/>
+              <item label="210 - 240°" value="240" color="#2891b8" alpha="255"/>
+              <item label="240 - 270°" value="270" color="#109889" alpha="255"/>
+              <item label="270 - 300°" value="300" color="#289a4f" alpha="255"/>
+              <item label="300 - 330°" value="330" color="#758d14" alpha="255"/>
+              <item label="> 330°" value="inf" color="#a8780d" alpha="255"/>
             </colorrampshader>
           </rastershader>
         </rasterrenderer>
@@ -2380,7 +2667,7 @@ def my_form_open(dialog, layer, feature):
         <rasterresampler maxOversampling="2"/>
         <resamplingStage>resamplingFilter</resamplingStage>
       </pipe>
-      <blendMode>8</blendMode>
+      <blendMode>0</blendMode>
     </maplayer>
     <maplayer autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" minScale="1e+08" styleCategories="AllStyleCategories" maxScale="0" refreshOnNotifyMessage="" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
@@ -2437,7 +2724,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2478,21 +2765,32 @@ def my_form_open(dialog, layer, feature):
         <provider>
           <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" maxOversampling="2" enabled="false"/>
         </provider>
-        <rasterrenderer grayBand="1" alphaBand="-1" opacity="1" nodataColor="" type="singlebandgray" gradient="WhiteToBlack">
+        <rasterrenderer classificationMin="0" classificationMax="0.4" alphaBand="-1" opacity="1" nodataColor="" type="singlebandpseudocolor" band="1">
           <rasterTransparency/>
           <minMaxOrigin>
             <limits>None</limits>
             <extent>WholeRaster</extent>
             <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.01</cumulativeCutLower>
-            <cumulativeCutUpper>0.99</cumulativeCutUpper>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
-          <contrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>0.4</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="1" labelPrecision="2" classificationMode="2" maximumValue="0.40000000000000002" minimumValue="0">
+              <colorramp name="[source]" type="gradient">
+                <prop k="color1" v="255,245,240,255"/>
+                <prop k="color2" v="103,0,13,255"/>
+                <prop k="discrete" v="0"/>
+                <prop k="rampType" v="gradient"/>
+                <prop k="stops" v="0.13;254,224,210,255:0.26;252,187,161,255:0.39;252,146,114,255:0.52;251,106,74,255:0.65;239,59,44,255:0.78;203,24,29,255:0.9;165,15,21,255"/>
+              </colorramp>
+              <item label="0,00" value="0" color="#fff5f0" alpha="255"/>
+              <item label="0,10" value="0.1" color="#fdbea5" alpha="255"/>
+              <item label="0,20" value="0.2" color="#fc7050" alpha="255"/>
+              <item label="0,30" value="0.3" color="#d42020" alpha="255"/>
+              <item label="0,40" value="0.4" color="#67000d" alpha="255"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0" gamma="1"/>
         <huesaturation colorizeOn="0" colorizeGreen="128" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255"/>
@@ -2556,7 +2854,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2597,7 +2895,7 @@ def my_form_open(dialog, layer, feature):
         <provider>
           <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" maxOversampling="2" enabled="false"/>
         </provider>
-        <rasterrenderer grayBand="1" alphaBand="-1" opacity="1" nodataColor="" type="singlebandgray" gradient="WhiteToBlack">
+        <rasterrenderer classificationMin="0" classificationMax="10" alphaBand="-1" opacity="1" nodataColor="" type="singlebandpseudocolor" band="1">
           <rasterTransparency/>
           <minMaxOrigin>
             <limits>None</limits>
@@ -2607,11 +2905,26 @@ def my_form_open(dialog, layer, feature):
             <cumulativeCutUpper>0.98</cumulativeCutUpper>
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
-          <contrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>6</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="1" labelPrecision="4" classificationMode="1" maximumValue="10" minimumValue="0">
+              <colorramp name="[source]" type="gradient">
+                <prop k="color1" v="255,245,240,255"/>
+                <prop k="color2" v="103,0,13,255"/>
+                <prop k="discrete" v="0"/>
+                <prop k="rampType" v="gradient"/>
+                <prop k="stops" v="0.13;254,224,210,255:0.26;252,187,161,255:0.39;252,146,114,255:0.52;251,106,74,255:0.65;239,59,44,255:0.78;203,24,29,255:0.9;165,15,21,255"/>
+              </colorramp>
+              <item label="0,0000" value="0" color="#fff5f0" alpha="255"/>
+              <item label="1,3000" value="1.3" color="#fee0d2" alpha="255"/>
+              <item label="2,6000" value="2.6" color="#fcbba1" alpha="255"/>
+              <item label="3,9000" value="3.9" color="#fc9272" alpha="255"/>
+              <item label="5,2000" value="5.2" color="#fb6a4a" alpha="255"/>
+              <item label="6,5000" value="6.5" color="#ef3b2c" alpha="255"/>
+              <item label="7,8000" value="7.800000000000001" color="#cb181d" alpha="255"/>
+              <item label="9,0000" value="9" color="#a50f15" alpha="255"/>
+              <item label="10,0000" value="10" color="#67000d" alpha="255"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0" gamma="1"/>
         <huesaturation colorizeOn="0" colorizeGreen="128" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255"/>
@@ -2675,7 +2988,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2888,7 +3201,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -2940,7 +3253,7 @@ def my_form_open(dialog, layer, feature):
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
           <rastershader>
-            <colorrampshader colorRampType="INTERPOLATED" clip="0" labelPrecision="4" classificationMode="1" maximumValue="360" minimumValue="0">
+            <colorrampshader colorRampType="DISCRETE" clip="0" labelPrecision="0" classificationMode="2" maximumValue="360" minimumValue="0">
               <colorramp name="[source]" type="gradient">
                 <prop k="color1" v="168,120,13,255"/>
                 <prop k="color2" v="168,120,13,255"/>
@@ -2948,26 +3261,18 @@ def my_form_open(dialog, layer, feature):
                 <prop k="rampType" v="gradient"/>
                 <prop k="stops" v="0.0526316;187,107,36,255:0.105263;202,92,58,255:0.157895;214,75,84,255:0.210526;221,56,117,255:0.263158;222,40,157,255:0.31579;213,42,197,255:0.368421;195,62,226,255:0.421053;172,84,241,255:0.473684;143,105,244,255:0.526316;109,122,234,255:0.578947;72,136,213,255:0.631579;42,144,186,255:0.684211;26,149,159,255:0.736842;14,152,132,255:0.789474;19,154,101,255:0.842105;59,153,61,255:0.894737;108,144,23,255:0.947368;142,133,13,255"/>
               </colorramp>
-              <item label="0,0000" value="0" color="#a8780d" alpha="255"/>
-              <item label="18,9474" value="18.947376" color="#bb6b24" alpha="255"/>
-              <item label="37,8947" value="37.89468" color="#ca5c3a" alpha="255"/>
-              <item label="56,8422" value="56.842200000000005" color="#d64b54" alpha="255"/>
-              <item label="75,7894" value="75.78936" color="#dd3875" alpha="255"/>
-              <item label="94,7369" value="94.73688" color="#de289d" alpha="255"/>
-              <item label="113,6844" value="113.68440000000001" color="#d52ac5" alpha="255"/>
-              <item label="132,6316" value="132.63156" color="#c33ee2" alpha="255"/>
-              <item label="151,5791" value="151.57908" color="#ac54f1" alpha="255"/>
-              <item label="170,5262" value="170.52624" color="#8f69f4" alpha="255"/>
-              <item label="189,4738" value="189.47376" color="#6d7aea" alpha="255"/>
-              <item label="208,4209" value="208.42092" color="#4888d5" alpha="255"/>
-              <item label="227,3684" value="227.36844" color="#2a90ba" alpha="255"/>
-              <item label="246,3160" value="246.31596000000002" color="#1a959f" alpha="255"/>
-              <item label="265,2631" value="265.26312" color="#0e9884" alpha="255"/>
-              <item label="284,2106" value="284.21064" color="#139a65" alpha="255"/>
-              <item label="303,1578" value="303.1578" color="#3b993d" alpha="255"/>
-              <item label="322,1053" value="322.10532" color="#6c9017" alpha="255"/>
-              <item label="341,0525" value="341.05248" color="#8e850d" alpha="255"/>
-              <item label="360,0000" value="360" color="#a8780d" alpha="255"/>
+              <item label="&lt;= 30°" value="30" color="#a8780d" alpha="255"/>
+              <item label="30 - 60°" value="60" color="#c66034" alpha="255"/>
+              <item label="60 - 90°" value="90" color="#da4263" alpha="255"/>
+              <item label="90 - 120°" value="120" color="#dd28a4" alpha="255"/>
+              <item label="120 - 150°" value="150" color="#c53ce0" alpha="255"/>
+              <item label="150 - 180°" value="180" color="#9a61f3" alpha="255"/>
+              <item label="180 - 210°" value="210" color="#5f7fe3" alpha="255"/>
+              <item label="210 - 240°" value="240" color="#2891b8" alpha="255"/>
+              <item label="240 - 270°" value="270" color="#109889" alpha="255"/>
+              <item label="270 - 300°" value="300" color="#289a4f" alpha="255"/>
+              <item label="300 - 330°" value="330" color="#758d14" alpha="255"/>
+              <item label="> 330°" value="inf" color="#a8780d" alpha="255"/>
             </colorrampshader>
           </rastershader>
         </rasterrenderer>
@@ -2976,7 +3281,7 @@ def my_form_open(dialog, layer, feature):
         <rasterresampler maxOversampling="2"/>
         <resamplingStage>resamplingFilter</resamplingStage>
       </pipe>
-      <blendMode>8</blendMode>
+      <blendMode>0</blendMode>
     </maplayer>
     <maplayer autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" minScale="1e+08" styleCategories="AllStyleCategories" maxScale="0" refreshOnNotifyMessage="" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
@@ -3033,7 +3338,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -3147,7 +3452,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -3188,21 +3493,32 @@ def my_form_open(dialog, layer, feature):
         <provider>
           <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" maxOversampling="2" enabled="false"/>
         </provider>
-        <rasterrenderer grayBand="1" alphaBand="-1" opacity="1" nodataColor="" type="singlebandgray" gradient="WhiteToBlack">
+        <rasterrenderer classificationMin="0" classificationMax="0.4" alphaBand="-1" opacity="1" nodataColor="" type="singlebandpseudocolor" band="1">
           <rasterTransparency/>
           <minMaxOrigin>
             <limits>None</limits>
             <extent>WholeRaster</extent>
             <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.01</cumulativeCutLower>
-            <cumulativeCutUpper>0.99</cumulativeCutUpper>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
-          <contrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>0.4</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="1" labelPrecision="2" classificationMode="2" maximumValue="0.40000000000000002" minimumValue="0">
+              <colorramp name="[source]" type="gradient">
+                <prop k="color1" v="255,245,240,255"/>
+                <prop k="color2" v="103,0,13,255"/>
+                <prop k="discrete" v="0"/>
+                <prop k="rampType" v="gradient"/>
+                <prop k="stops" v="0.13;254,224,210,255:0.26;252,187,161,255:0.39;252,146,114,255:0.52;251,106,74,255:0.65;239,59,44,255:0.78;203,24,29,255:0.9;165,15,21,255"/>
+              </colorramp>
+              <item label="0,00" value="0" color="#fff5f0" alpha="255"/>
+              <item label="0,10" value="0.1" color="#fdbea5" alpha="255"/>
+              <item label="0,20" value="0.2" color="#fc7050" alpha="255"/>
+              <item label="0,30" value="0.3" color="#d42020" alpha="255"/>
+              <item label="0,40" value="0.4" color="#67000d" alpha="255"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0" gamma="1"/>
         <huesaturation colorizeOn="0" colorizeGreen="128" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255"/>
@@ -3266,7 +3582,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -3307,7 +3623,7 @@ def my_form_open(dialog, layer, feature):
         <provider>
           <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" maxOversampling="2" enabled="false"/>
         </provider>
-        <rasterrenderer grayBand="1" alphaBand="-1" opacity="1" nodataColor="" type="singlebandgray" gradient="WhiteToBlack">
+        <rasterrenderer classificationMin="0" classificationMax="10" alphaBand="-1" opacity="1" nodataColor="" type="singlebandpseudocolor" band="1">
           <rasterTransparency/>
           <minMaxOrigin>
             <limits>None</limits>
@@ -3317,11 +3633,26 @@ def my_form_open(dialog, layer, feature):
             <cumulativeCutUpper>0.98</cumulativeCutUpper>
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
-          <contrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>6</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </contrastEnhancement>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="1" labelPrecision="4" classificationMode="1" maximumValue="10" minimumValue="0">
+              <colorramp name="[source]" type="gradient">
+                <prop k="color1" v="255,245,240,255"/>
+                <prop k="color2" v="103,0,13,255"/>
+                <prop k="discrete" v="0"/>
+                <prop k="rampType" v="gradient"/>
+                <prop k="stops" v="0.13;254,224,210,255:0.26;252,187,161,255:0.39;252,146,114,255:0.52;251,106,74,255:0.65;239,59,44,255:0.78;203,24,29,255:0.9;165,15,21,255"/>
+              </colorramp>
+              <item label="0,0000" value="0" color="#fff5f0" alpha="255"/>
+              <item label="1,3000" value="1.3" color="#fee0d2" alpha="255"/>
+              <item label="2,6000" value="2.6" color="#fcbba1" alpha="255"/>
+              <item label="3,9000" value="3.9" color="#fc9272" alpha="255"/>
+              <item label="5,2000" value="5.2" color="#fb6a4a" alpha="255"/>
+              <item label="6,5000" value="6.5" color="#ef3b2c" alpha="255"/>
+              <item label="7,8000" value="7.800000000000001" color="#cb181d" alpha="255"/>
+              <item label="9,0000" value="9" color="#a50f15" alpha="255"/>
+              <item label="10,0000" value="10" color="#67000d" alpha="255"/>
+            </colorrampshader>
+          </rastershader>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0" gamma="1"/>
         <huesaturation colorizeOn="0" colorizeGreen="128" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255"/>
@@ -3385,7 +3716,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -3811,7 +4142,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -4268,7 +4599,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -4569,7 +4900,7 @@ def my_form_open(dialog, layer, feature):
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
@@ -4699,7 +5030,10 @@ def my_form_open(dialog, layer, feature):
           <category label="97" symbol="92" value="97" render="true"/>
           <category label="99" symbol="93" value="99" render="true"/>
           <category label="100" symbol="94" value="100" render="true"/>
-          <category label="" symbol="95" value="" render="true"/>
+          <category label="101" symbol="95" value="101" render="true"/>
+          <category label="102" symbol="96" value="102" render="true"/>
+          <category label="103" symbol="97" value="103" render="true"/>
+          <category label="" symbol="98" value="" render="true"/>
         </categories>
         <symbols>
           <symbol force_rhr="0" clip_to_extent="1" name="0" alpha="1" type="line">
@@ -4714,7 +5048,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="215,43,201,255"/>
+              <prop k="line_color" v="159,16,236,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4746,7 +5080,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="207,32,26,255"/>
+              <prop k="line_color" v="159,16,236,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4778,7 +5112,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="104,215,197,255"/>
+              <prop k="line_color" v="48,39,228,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4810,7 +5144,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="223,28,171,255"/>
+              <prop k="line_color" v="201,100,157,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4842,7 +5176,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="105,212,148,255"/>
+              <prop k="line_color" v="98,220,135,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4874,7 +5208,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="127,223,183,255"/>
+              <prop k="line_color" v="89,127,209,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4906,7 +5240,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="127,223,183,255"/>
+              <prop k="line_color" v="144,107,237,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4938,7 +5272,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="26,214,173,255"/>
+              <prop k="line_color" v="231,28,191,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -4970,7 +5304,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="30,126,229,255"/>
+              <prop k="line_color" v="231,28,191,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5002,7 +5336,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="209,224,75,255"/>
+              <prop k="line_color" v="217,137,17,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5034,7 +5368,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="213,83,68,255"/>
+              <prop k="line_color" v="172,228,81,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5066,7 +5400,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="152,97,235,255"/>
+              <prop k="line_color" v="217,115,216,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5098,7 +5432,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="187,35,233,255"/>
+              <prop k="line_color" v="42,202,168,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5130,7 +5464,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="209,170,27,255"/>
+              <prop k="line_color" v="218,72,209,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5162,7 +5496,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="112,50,236,255"/>
+              <prop k="line_color" v="214,181,60,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5194,7 +5528,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="237,231,33,255"/>
+              <prop k="line_color" v="95,221,86,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5226,7 +5560,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="84,227,115,255"/>
+              <prop k="line_color" v="137,96,214,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5258,7 +5592,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="143,81,219,255"/>
+              <prop k="line_color" v="204,210,18,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5290,7 +5624,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="236,122,168,255"/>
+              <prop k="line_color" v="221,133,188,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5322,7 +5656,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="238,19,92,255"/>
+              <prop k="line_color" v="22,239,113,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5354,7 +5688,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="206,34,203,255"/>
+              <prop k="line_color" v="22,239,113,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5386,7 +5720,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="206,34,203,255"/>
+              <prop k="line_color" v="177,208,54,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5418,7 +5752,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="117,227,236,255"/>
+              <prop k="line_color" v="117,80,240,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5450,7 +5784,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="227,127,156,255"/>
+              <prop k="line_color" v="28,95,202,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5482,7 +5816,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="111,211,23,255"/>
+              <prop k="line_color" v="230,161,76,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5514,7 +5848,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="93,122,218,255"/>
+              <prop k="line_color" v="219,158,100,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5546,7 +5880,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="19,52,215,255"/>
+              <prop k="line_color" v="219,158,100,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5578,7 +5912,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="164,117,208,255"/>
+              <prop k="line_color" v="75,205,14,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5610,7 +5944,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="228,61,139,255"/>
+              <prop k="line_color" v="44,126,208,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5642,7 +5976,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="79,135,239,255"/>
+              <prop k="line_color" v="51,210,128,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5674,7 +6008,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="167,206,109,255"/>
+              <prop k="line_color" v="79,205,201,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5706,7 +6040,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="206,209,112,255"/>
+              <prop k="line_color" v="102,25,209,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5738,7 +6072,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="238,174,139,255"/>
+              <prop k="line_color" v="233,99,124,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5770,7 +6104,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="236,163,99,255"/>
+              <prop k="line_color" v="76,181,229,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5802,7 +6136,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="159,130,237,255"/>
+              <prop k="line_color" v="28,95,202,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5834,7 +6168,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="192,37,209,255"/>
+              <prop k="line_color" v="215,212,117,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5866,7 +6200,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="51,157,228,255"/>
+              <prop k="line_color" v="34,213,240,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5898,7 +6232,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="26,113,235,255"/>
+              <prop k="line_color" v="234,110,156,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5930,7 +6264,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="27,201,140,255"/>
+              <prop k="line_color" v="45,207,132,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5962,7 +6296,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="97,221,83,255"/>
+              <prop k="line_color" v="124,238,16,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -5994,7 +6328,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="137,218,94,255"/>
+              <prop k="line_color" v="125,213,74,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6026,7 +6360,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="129,227,102,255"/>
+              <prop k="line_color" v="111,226,72,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6058,7 +6392,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="52,175,236,255"/>
+              <prop k="line_color" v="173,229,130,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6090,7 +6424,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="148,21,238,255"/>
+              <prop k="line_color" v="201,82,74,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6122,7 +6456,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="208,106,167,255"/>
+              <prop k="line_color" v="59,236,59,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6154,7 +6488,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="228,184,71,255"/>
+              <prop k="line_color" v="55,67,229,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6186,7 +6520,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="106,236,167,255"/>
+              <prop k="line_color" v="228,188,85,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6218,7 +6552,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="101,221,105,255"/>
+              <prop k="line_color" v="200,84,69,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6250,7 +6584,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="57,72,204,255"/>
+              <prop k="line_color" v="214,203,97,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6282,7 +6616,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="57,72,204,255"/>
+              <prop k="line_color" v="166,218,102,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6314,7 +6648,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="30,233,60,255"/>
+              <prop k="line_color" v="166,218,102,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6346,7 +6680,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="228,47,168,255"/>
+              <prop k="line_color" v="206,146,120,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6378,7 +6712,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="228,47,168,255"/>
+              <prop k="line_color" v="25,202,173,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6410,7 +6744,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="140,125,223,255"/>
+              <prop k="line_color" v="212,128,153,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6442,7 +6776,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="71,235,230,255"/>
+              <prop k="line_color" v="239,119,171,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6474,7 +6808,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="118,223,153,255"/>
+              <prop k="line_color" v="131,110,234,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6506,7 +6840,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="211,165,95,255"/>
+              <prop k="line_color" v="183,215,93,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6538,7 +6872,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="216,69,74,255"/>
+              <prop k="line_color" v="230,66,85,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6570,7 +6904,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="164,208,50,255"/>
+              <prop k="line_color" v="62,147,200,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6602,7 +6936,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="19,181,225,255"/>
+              <prop k="line_color" v="178,41,232,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6634,7 +6968,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="19,181,225,255"/>
+              <prop k="line_color" v="207,31,31,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6666,7 +7000,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="229,64,196,255"/>
+              <prop k="line_color" v="207,31,31,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6698,7 +7032,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="204,62,232,255"/>
+              <prop k="line_color" v="211,68,24,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6730,7 +7064,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="141,229,77,255"/>
+              <prop k="line_color" v="111,231,92,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6762,7 +7096,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="165,47,228,255"/>
+              <prop k="line_color" v="238,116,200,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6794,7 +7128,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="222,70,28,255"/>
+              <prop k="line_color" v="26,53,225,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6826,7 +7160,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="88,74,235,255"/>
+              <prop k="line_color" v="102,225,74,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6858,7 +7192,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="211,165,95,255"/>
+              <prop k="line_color" v="110,112,208,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6890,7 +7224,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="204,39,179,255"/>
+              <prop k="line_color" v="217,228,88,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6922,7 +7256,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="140,192,237,255"/>
+              <prop k="line_color" v="212,133,115,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6954,7 +7288,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="95,219,221,255"/>
+              <prop k="line_color" v="128,38,206,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -6986,7 +7320,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="214,129,96,255"/>
+              <prop k="line_color" v="110,220,129,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7018,7 +7352,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="225,15,61,255"/>
+              <prop k="line_color" v="115,202,145,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7050,7 +7384,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="68,212,109,255"/>
+              <prop k="line_color" v="57,36,240,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7082,7 +7416,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="200,182,79,255"/>
+              <prop k="line_color" v="155,97,222,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7114,7 +7448,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="182,224,133,255"/>
+              <prop k="line_color" v="211,182,14,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7146,7 +7480,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="182,225,27,255"/>
+              <prop k="line_color" v="212,15,186,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7178,7 +7512,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="130,155,217,255"/>
+              <prop k="line_color" v="219,87,120,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7210,7 +7544,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="87,211,97,255"/>
+              <prop k="line_color" v="110,112,208,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7242,7 +7576,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="211,142,62,255"/>
+              <prop k="line_color" v="50,229,71,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7274,7 +7608,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="142,200,118,255"/>
+              <prop k="line_color" v="17,222,240,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7306,7 +7640,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="204,191,69,255"/>
+              <prop k="line_color" v="151,75,205,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7338,7 +7672,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="43,201,185,255"/>
+              <prop k="line_color" v="122,211,143,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7370,7 +7704,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="215,164,68,255"/>
+              <prop k="line_color" v="234,165,116,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7402,7 +7736,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="16,13,212,255"/>
+              <prop k="line_color" v="41,89,231,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7434,7 +7768,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="177,224,82,255"/>
+              <prop k="line_color" v="68,237,189,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7466,7 +7800,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="80,211,150,255"/>
+              <prop k="line_color" v="108,212,238,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7498,7 +7832,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="15,177,235,255"/>
+              <prop k="line_color" v="75,141,227,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7530,7 +7864,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="200,121,163,255"/>
+              <prop k="line_color" v="209,92,215,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7562,7 +7896,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="202,38,54,255"/>
+              <prop k="line_color" v="29,67,220,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7594,7 +7928,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="237,80,53,255"/>
+              <prop k="line_color" v="181,74,213,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7626,7 +7960,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="47,201,41,255"/>
+              <prop k="line_color" v="202,66,168,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7658,7 +7992,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="45,51,230,255"/>
+              <prop k="line_color" v="223,120,60,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7690,7 +8024,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="211,107,123,255"/>
+              <prop k="line_color" v="189,90,209,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7722,7 +8056,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="194,96,236,255"/>
+              <prop k="line_color" v="76,213,83,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -7754,7 +8088,103 @@ def my_form_open(dialog, layer, feature):
               <prop k="dash_pattern_offset_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="16,206,239,255"/>
+              <prop k="line_color" v="117,199,229,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="tweak_dash_pattern_on_corners" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol force_rhr="0" clip_to_extent="1" name="96" alpha="1" type="line">
+            <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+              <prop k="align_dash_pattern" v="0"/>
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="dash_pattern_offset" v="0"/>
+              <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="dash_pattern_offset_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="44,200,138,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="tweak_dash_pattern_on_corners" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol force_rhr="0" clip_to_extent="1" name="97" alpha="1" type="line">
+            <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+              <prop k="align_dash_pattern" v="0"/>
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="dash_pattern_offset" v="0"/>
+              <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="dash_pattern_offset_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="157,205,61,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="ring_filter" v="0"/>
+              <prop k="tweak_dash_pattern_on_corners" v="0"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol force_rhr="0" clip_to_extent="1" name="98" alpha="1" type="line">
+            <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+              <prop k="align_dash_pattern" v="0"/>
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="dash_pattern_offset" v="0"/>
+              <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="dash_pattern_offset_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="200,25,37,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="1"/>
               <prop k="line_width_unit" v="MM"/>
@@ -8011,6 +8441,7 @@ def my_form_open(dialog, layer, feature):
     <layer id="HELCOM_MPAs_4ab528f6_077f_4430_81d2_d453981523fa"/>
     <layer id="BalticSea_GlobalFishingWatch_fishingEffort_20120101_20161231_e30886c6_ae1c_4335_b219_9306651c8fb1"/>
     <layer id="BalticSea_bathymetry_a90e63ac_a7f6_4805_a44f_6ee3db365ebe"/>
+    <layer id="Artefacts_26aa5bd6_a669_4ead_bbdf_0b8fed80844e"/>
   </layerorder>
   <properties>
     <Digitizing>
@@ -8113,7 +8544,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent ymax="6048340.08739219419658184" xmin="606667.88480240432545543" ymin="6044422.83496352471411228" xmax="616396.28771277191117406">
+    <DefaultViewExtent ymax="6048168.69520498067140579" xmin="607697.58718861627858132" ymin="6043382.64109964482486248" xmax="615254.71075260604266077">
       <spatialrefsys>
         <wkt>PROJCRS["WGS 84 / UTM zone 32N",BASEGEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["UTM zone 32N",METHOD["Transverse Mercator",ID["EPSG",9807]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",9,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9996,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",500000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["unknown"],AREA["World - N hemisphere - 6°E to 12°E - by country"],BBOX[0,6,84,12]],ID["EPSG",32632]]</wkt>
         <proj4>+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs</proj4>
