@@ -18,6 +18,7 @@ MGF Ostsee/
 │  └─ MGF Ostsee.qgs        # QGIS project file (as text file instead of .qgz)
 ├─ ressources/            # other ressources
 │  └─ images/               # images
+├─ CONTRIBUTING.md
 └─ README.md
 ```
 
@@ -36,6 +37,8 @@ The core contributors are:
 Use GitHub's issue tracker as a to-do list, report bugs or request features.
 
 ### C.2 Editing files
+If possible, files should be edited on a separate branch from the `master` branch. **Its name should start with the initials of the contributor working on it** and others should not interfere in that branch.
+
 #### C.2.1 Editing the QGIS project
 Any changes to the project (layer ordering, styles, etc.) should be explained in the commit messages, as they are not obvious from the file diff.
 
