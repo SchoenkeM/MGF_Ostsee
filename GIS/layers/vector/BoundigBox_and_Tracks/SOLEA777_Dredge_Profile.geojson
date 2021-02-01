@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "SOLEA777_Dredge_Profile",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Solera777_6_1", "LAYER": "Unclassified Line Feature", "LENGTH": "316.33 m", "BEARING": "53� 42.392'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.756397, 54.557735 ], [ 10.760338, 54.559417 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_7-1", "LAYER": "Unclassified Line Feature", "LENGTH": "130.26 m", "BEARING": "192� 35.645'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.780687, 54.559215 ], [ 10.780248, 54.558073 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_9-2", "LAYER": "Unclassified Line Feature", "LENGTH": "114.55 m", "BEARING": "15� 46.593'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.751913, 54.544128 ], [ 10.752338, 54.545058 ], [ 10.752332502560584, 54.544991236438754 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_8-1", "LAYER": "Unclassified Line Feature", "LENGTH": "136.04 m", "BEARING": "84� 10.533'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.773502, 54.541183 ], [ 10.775593, 54.541307 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_5-2", "LAYER": "Unclassified Line Feature", "LENGTH": "1.364 km", "BEARING": "1� 26.964'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.751270565178489, 54.542998284500484 ], [ 10.751728601282695, 54.555161149965706 ], [ 10.751796579181926, 54.555081681755681 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_4-2", "LAYER": "Unclassified Line Feature", "LENGTH": "1.396 km", "BEARING": "91� 4.449'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.757162629733687, 54.541111490146235 ], [ 10.778616671831802, 54.540937269386738 ], [ 10.778591570829064, 54.540875978217102 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_3-2", "LAYER": "Unclassified Line Feature", "LENGTH": "1.385 km", "BEARING": "182� 1.502'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.780914354826113, 54.563461524721774 ], [ 10.780158, 54.551027 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera777_2-2", "LAYER": "Unclassified Line Feature", "LENGTH": "1.481 km", "BEARING": "228� 58.333'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.775082491581065, 54.567519317452806 ], [ 10.757907349524787, 54.558830506343924 ], [ 10.757995442446422, 54.55887707640553 ] ] ] } },
+{ "type": "Feature", "properties": { "NAME": "Solera_1-2", "LAYER": "Unclassified Line Feature", "LENGTH": "2.815 km", "BEARING": "88� 37.768'" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.691715, 54.546873 ], [ 10.7352, 54.54747 ] ] ] } }
+]
+}
