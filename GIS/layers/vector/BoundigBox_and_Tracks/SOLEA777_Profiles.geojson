@@ -1,0 +1,26 @@
+{
+"type": "FeatureCollection",
+"name": "SOLEA777_Profiles",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "1-2", "Device": "Grundschleppnetz TV3-520" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.7352, 54.547467 ], [ 10.691717, 54.546867 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "30-3", "Device": "Bodengreifer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.65645, 54.5383 ], [ 10.656533, 54.538333 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "30-4", "Device": "Bodengreifer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.67455, 54.5453 ], [ 10.674467, 54.545633 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "2-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.757933, 54.55885 ], [ 10.775083, 54.567583 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "3-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.78015, 54.551033 ], [ 10.780967, 54.563433 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "4-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.77865, 54.540967 ], [ 10.757183, 54.5411 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "5-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.751233, 54.542983 ], [ 10.751717, 54.555167 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "6-1", "Device": "2mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.7564, 54.557733 ], [ 10.760333, 54.559417 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "7-1", "Device": "2mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.78025, 54.558067 ], [ 10.780683, 54.559217 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "8-1", "Device": "2mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.7756, 54.5413 ], [ 10.7735, 54.541183 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "9-2", "Device": "2mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.751917, 54.544133 ], [ 10.752333, 54.54505 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "19-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.729717, 54.538667 ], [ 10.707667, 54.537983 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "20-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.69615, 54.537667 ], [ 10.67445, 54.537233 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "21-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.664983, 54.543717 ], [ 10.68625, 54.544517 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "22-2", "Device": "3mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.69745, 54.545067 ], [ 10.71905, 54.545783 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "23-1", "Device": "2mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.725167, 54.546033 ], [ 10.727917, 54.546167 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "24-1", "Device": "2mBaumkurre" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.723967, 54.545933 ], [ 10.72705, 54.546017 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "30-1", "Device": "Bodengreifer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.785667, 54.546683 ], [ 10.785033, 54.54635 ] ] ] } },
+{ "type": "Feature", "properties": { "LAYER": "Unclassified Line Feature", "Station": "30-2", "Device": "Bodengreifer" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 10.75235, 54.537167 ], [ 10.751867, 54.53725 ] ] ] } }
+]
+}
