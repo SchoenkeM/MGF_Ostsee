@@ -1,6 +1,6 @@
-# MGF Ostsee
+# <img src="/ressources/images/MGF-Ostsee_Logo_DE_bunt.png" width="250"> MGF Ostsee
 
-This repository is part of the MGF Ostsee project.
+This repository is part of the [MGF Ostsee project](https://www.io-warnemuende.de/dam-mgf-ostsee-start.html).
 
 Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before starting to contribute to this repository.
 
