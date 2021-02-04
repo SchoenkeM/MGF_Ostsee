@@ -8,7 +8,9 @@ function s = encodeGeojsonStruct(obj)
     properties              = arrayfun(@(x) {x},properties);
     geometry                = arrayfun(@(x) {x},geometry);
     
-    s = obj.Data;
+    s           = obj.Data;
+    % resize features in case some were added or deleted
+    s.features  = repmat(obj.Data.features(1),numel(properties),1);
     [s.features(:).properties]	= properties{:};
     [s.features(:).geometry]    = geometry{:};
 end

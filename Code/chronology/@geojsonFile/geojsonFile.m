@@ -13,6 +13,9 @@ classdef geojsonFile < handle
         PermissionRead logical
         PermissionWrite logical
     end
+    properties (Dependent) 
+        NFeatures double
+    end
     
     methods
         function obj = geojsonFile(path,varargin)
@@ -62,6 +65,9 @@ classdef geojsonFile < handle
         end
         function PermissionWrite = get.PermissionWrite(obj)
             PermissionWrite = ismember('w',obj.Permission);
+        end
+        function NFeatures = get.NFeatures(obj)
+            NFeatures = size(obj.Attributes,1);
         end
     end
 end
