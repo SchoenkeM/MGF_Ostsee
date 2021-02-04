@@ -1,5 +1,14 @@
+% runCode
+%
+% This script starts a trawl mark intersection characterization session.
+
 clear
 
+% Decide if the intersection attribute table should be reset to its
+% original form (topTrack, etc. columns are then removed).
+ResetFlag   = true;
+
+% Define filepaths
 rootFolder          = '/Users/David/Dropbox/David/university/PostDoc/ressoruces/GIS/MGF Ostsee/';
 intersetionsPath    = [rootFolder,'GIS/layers/vector/TrawlMarkIntersections.geojson'];
 linesPath           = [rootFolder,'GIS/layers/vector/TrawlMarks.geojson'];
@@ -7,7 +16,6 @@ rasterPath          = [rootFolder,'GIS/layers/raster/*_*_*_bathymetry_AZ*_EL*_ZF
 rasterPaths         = dir(rasterPath);
 rasterPaths         = fullfile({rasterPaths.folder},{rasterPaths.name})';
 
-
-
+% Create establishSuccession handle
 establishSuccession(intersetionsPath,linesPath,rasterPaths,...
-    'ResetIntersections',       true)
+    'ResetIntersections',       ResetFlag)

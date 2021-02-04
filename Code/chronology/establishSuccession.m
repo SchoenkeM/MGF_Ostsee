@@ -1,13 +1,62 @@
 function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
-
+% establishSuccession  Create and control a successionEstablisher UI
+%   ESTABLISHSUCCESSION creates and controls a successionEstablisher UI
+%   letting the user decide which of the two lines involved in an
+%   intersection is on top.
+%
+%   Syntax
+%     ESTABLISHSUCCESSION(intersetionsPath,linesPath,rasterPaths)
+%     ESTABLISHSUCCESSION(__,Name,Value)
+%
+%   Description
+%     ESTABLISHSUCCESSION(intersetionsPath,linesPath,rasterPaths) start a
+%       sucessionEstablisher UI
+%     ESTABLISHSUCCESSION(__,Name,Value) specifies additional properties
+%       using one or more Name,Value pair arguments. 
+%
+%   Example(s)
+%     ESTABLISHSUCCESSION(intersetionsPath,linesPath,rasterPaths)
+%     ESTABLISHSUCCESSION(intersetionsPath,linesPath,rasterPaths,'ResetIntersections',true)
+%
+%
+%   Input Arguments
+%     intersetionsPath - Path to an intersections .geojson file
+%       char
+%         Path to an intersections .geojson file.
+%
+%     linesPath - Path to a lines .geojson file
+%       char
+%         Path to a lines .geojson file.
+%
+%     rasterPaths - Path(s) to raster .tif file(s)
+%       char | cellstr
+%         Path(s) to raster .tif file(s) that will be shown in the
+%         background.
+%
+%
+%   Output Arguments
+%
+%
+%   Name-Value Pair Arguments
+%     ResetIntersections - Intersections attribute table reset flag
+%       false (default) | true
+%         Decide if the intersection attribute table should be reset to its
+%         original form (topTrack, etc. columns are then removed).
+%
+%
+%   See also SUCCESSIONESTABLISHER, GEOJSONFILE
+%
+%   Copyright (c) 2021 David Clemens (dclemens@geomar.de)
+%
             
     import internal.stats.parseArgs
 
-    % parse Name-Value pairs
+    % Parse Name-Value pairs
     optionName          = {'ResetIntersections'}; % valid options (Name)
     optionDefaultValue  = {false}; % default value (Value)
     [resetIntersections] = parseArgs(optionName,optionDefaultValue,varargin{:}); % parse function arguments
     
+    % Input handling and checking
     rasterPathsClass = class(intersetionsPath);
     if ischar(rasterPaths)
         rasterPaths = cellstr(rasterPaths);
@@ -25,6 +74,7 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
             'The third input argument should be a ''char'' or ''cellstr''. Was ''%s'' instead.',rasterPathsClass)
     end
     
+    % Create geojsonFile handles
     intersections   = geojsonFile(intersetionsPath,'rw');
     lines           = geojsonFile(linesPath);
     
@@ -43,7 +93,7 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
         intersections.Attributes{:,'intersection'} = (1:intersections.NFeatures)';
         intersections.write;
     end
-    % calculate acute angles at intersection if necessary
+    % Calculate acute angles at intersection if necessary
     if ~ismember('angle',intersections.Attributes.Properties.VariableNames)
         calculateIntersectionAngles(intersections,lines);
         intersections.write;
@@ -60,12 +110,14 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
     end    
     
     nRaster     = numel(rasterPaths);
+    
+    % Initialize
     raster      = struct('A',[],'X',[],'Y',[],'Alpha',[],'Az',[]);
-
-    for rr = 1:nRaster
-      	info = imfinfo(rasterPaths{rr});
+    for rr = 1:nRaster % Loop over all raster files
+        % Get image information
+      	info    = imfinfo(rasterPaths{rr});
         
-        % Get hillshade azimuth
+        % Get hillshade azimuth from filename
         tmp             = regexp(info.Filename,'_AZ(\d{1,3})_EL\d{1,2}_ZF\d+\.tif{1,2}$','tokens');
         raster(rr).Az   = str2double(tmp{:}{:});
         
@@ -96,6 +148,7 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
 	sortData.Properties.VariableNames{ismember(sortData.Properties.VariableNames,'trawl_right')} = 'trawl_2';
     sortData.trawlScore     = sum(sortData{:,{'trawl','trawl_2'}} > 0,2);
     
+    % Create intersection order
     % This is the ordering:
     %   1. intersections where both tracks involved are part of a trawl
     %      track pair are prioritised
@@ -103,46 +156,55 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
     %      prioritised
     [~,intersectionIndices]	= sortrows(sortData,{'trawlScore','angle'},{'descend','descend'});
     % TODO: prioritise the order of these indeces. See
-    % https://github.com/davidclemens/MGF-Ostsee/issues/3.
+    % https://github.com/davidclemens/MGF-Ostsee/issues/3.    
     
-    
+    % Create successionEstablisher handle
     SE = successionEstablisher(lines,intersections,...
         'BackgroundRaster',     raster,...
         'IntersectionOrder',    intersectionIndices);
     
+    % Start the user interaction with the UI
     keepRunning     = true;
-    intersection    = 1;
+    intersection    = 1; % Intersection index
     while keepRunning
-        
+        % Set current intersection
         SE.CurrentIntersection  = intersection;
         
+        % Loop until a valid key is pressed
         waitForValidKey = true;
         while waitForValidKey
             key = waitForKeyPress;
             switch key
                 case 'downarrow'
+                    % Show previous intersection
                     intersection        = max([1,intersection - 1]);
                     waitForValidKey     = false;
                 case 'uparrow'
+                    % Show next intersection
                     intersection        = min([SE.NIntersections,intersection + 1]);
                     waitForValidKey     = false;
                 case 'leftarrow'
+                    % Mark track with track index 1 as on top
                     SE.SelectedTrack    = 1;
                     waitForValidKey     = false;
                 case 'rightarrow'
+                    % Mark track with track index 2 as on top
                     SE.SelectedTrack    = 2;
                     waitForValidKey     = false;
                 case 'space'
+                    % Mark no track as on top
                     SE.SelectedTrack    = 0;
                     waitForValidKey     = false;
                 case 'escape'
+                    % Stop the UI
                     waitForValidKey     = false;
                     keepRunning         = false;
                 case 's'
+                    % Save the changes to disk
                     waitForValidKey     = false;
                     SE.Intersections.write;
                 otherwise
-                    
+                    % Continue waiting for a valid key press
             end
         end
     end
