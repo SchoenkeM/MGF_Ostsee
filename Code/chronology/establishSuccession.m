@@ -184,7 +184,9 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
     intersection    = 1; % Intersection index
     while keepRunning
         % Set current intersection
-        SE.CurrentIntersection  = intersection;
+        if intersection ~= SE.CurrentIntersection
+            SE.CurrentIntersection  = intersection;
+        end
         
         % Loop until a valid key is pressed
         waitForValidKey = true;

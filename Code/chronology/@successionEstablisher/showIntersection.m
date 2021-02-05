@@ -67,8 +67,6 @@ function showIntersection(obj)
         'XLim',     XData + [-1 1].*obj.BufferDistance,...
         'YLim',     YData + [-1 1].*obj.BufferDistance)
     
-    highlightSelection(obj)
-    
     % set 'isPicked' flag
     obj.Intersections.Attributes{obj.IntersectionOrder(intersection),'isPicked'} = true;
     
