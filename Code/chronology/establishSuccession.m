@@ -51,16 +51,20 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
             
     import internal.stats.parseArgs
 
-    % Parse Name-Value pairs
-    optionName          = {'ResetIntersections'}; % valid options (Name)
-    optionDefaultValue  = {false}; % default value (Value)
-    [resetIntersections] = parseArgs(optionName,optionDefaultValue,varargin{:}); % parse function arguments
-    
     % Input handling and checking
     rasterPathsClass = class(intersetionsPath);
     if ischar(rasterPaths)
         rasterPaths = cellstr(rasterPaths);
     end
+    nRaster                     = numel(rasterPaths);
+    defaultRasterAxesSubscripts	= arrayfun(@(rr) [rr 1;rr 2],1:nRaster,'un',0)';
+    
+    % Parse Name-Value pairs
+    optionName          = {'ResetIntersections','RasterAxesSubscripts'}; % valid options (Name)
+    optionDefaultValue  = {false,defaultRasterAxesSubscripts}; % default value (Value)
+    [resetIntersections,...
+     rasterAxesSubscripts] = parseArgs(optionName,optionDefaultValue,varargin{:}); % parse function arguments
+    
     if ~ischar(intersetionsPath)
         error('MGFOstsee:chronology:establishSuccession:invalidInputType',...
             'The first input argument should be a ''char''. Was ''%s'' instead.',class(intersetionsPath))
@@ -112,21 +116,33 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
     nRaster     = numel(rasterPaths);
     
     % Initialize
-    raster      = struct('A',[],'X',[],'Y',[],'Alpha',[],'Az',[]);
+    raster      = struct('A',[],'X',[],'Y',[],'Alpha',[]);
     for rr = 1:nRaster % Loop over all raster files
         % Get image information
       	info    = imfinfo(rasterPaths{rr});
-        
-        % Get hillshade azimuth from filename
-        tmp             = regexp(info.Filename,'_AZ(\d{1,3})_EL\d{1,2}_ZF\d+\.tif{1,2}$','tokens');
-        raster(rr).Az   = str2double(tmp{:}{:});
         
         % Read geotif
         [raster(rr).A,raster(rr).X,raster(rr).Y,~] = geoimread(rasterPaths{rr});
         
         % Create alpha mask
-        raster(rr).Alpha               	= raster(rr).A == str2double(info.GDAL_NODATA);
-        raster(rr).A(raster(rr).Alpha)	= NaN;
+        try
+            raster(rr).Alpha               	= raster(rr).A == str2double(info.GDAL_NODATA);
+        catch ME
+            switch ME.identifier
+                case 'MATLAB:nonExistentField'
+                    if ~isempty(regexp(ME.message,'''GDAL_NODATA''\.$','once'))
+                        raster(rr).Alpha = false(size(raster(rr).A));
+                    else
+                        rethrow(ME)
+                    end
+                otherwise
+                    rethrow(ME)
+            end
+        end
+        raster(rr).A(raster(rr).Alpha)	= NaN; 
+        
+        % Asign AxesSubscripts
+        raster(rr).AxesSubscripts       = rasterAxesSubscripts{rr};
     end
     
     % Generate data for prioritization

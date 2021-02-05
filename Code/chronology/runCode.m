@@ -12,10 +12,14 @@ ResetFlag   = true;
 rootFolder          = '/Users/David/Dropbox/David/university/PostDoc/ressoruces/GIS/MGF Ostsee/';
 intersetionsPath    = [rootFolder,'GIS/layers/vector/TrawlMarkIntersections.geojson'];
 linesPath           = [rootFolder,'GIS/layers/vector/TrawlMarks.geojson'];
-rasterPath          = [rootFolder,'GIS/layers/raster/*_*_*_bathymetry_AZ*_EL*_ZF*.tif']; % Filename pattern
-rasterPaths         = dir(rasterPath);
+rasterPath        	= [rootFolder,'GIS/layers/raster/*_*_*_bathymetry_*.tif']; % Filename pattern
+rasterPaths       	= dir(rasterPath);
 rasterPaths         = fullfile({rasterPaths.folder},{rasterPaths.name})';
+rasterPaths         = rasterPaths(~cellfun(@isempty,regexp(rasterPaths,'rendered\.tif$')));
+
+rasterAxesSubscripts    = {[1 1;1 2];[2 1;2 2];[3 1;3 2];[1 1;1 2];[2 1;2 2];[3 1;3 2]};
 
 % Create establishSuccession handle
 establishSuccession(intersetionsPath,linesPath,rasterPaths,...
-    'ResetIntersections',       ResetFlag)
+    'ResetIntersections',       ResetFlag,...
+    'RasterAxesSubscripts',     rasterAxesSubscripts)

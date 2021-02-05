@@ -1,5 +1,10 @@
 function showIntersection(obj)
 
+    % Set status text
+    set(findobj(obj.TextHandles,'Tag','status'),...
+        'String',       'loading intersection ...')
+    drawnow
+    
     try
         delete(obj.LineHandles)
         delete(obj.IntersectionHandles)
@@ -9,12 +14,7 @@ function showIntersection(obj)
     
     intersection = obj.CurrentIntersection;
     
-    lineColor   = [0.8941    0.1020    0.1098
-                   0.2157    0.4941    0.7216];
-	clr         = {'\color[rgb]{0.8941,0.1020,0.1098}'
-                   '\color[rgb]{0.2157,0.4941,0.7216}'
-                   '\color[rgb]{0,0,0}'
-                   '\color[rgb]{0.8,0.8,0.8}'};
+    clr     = obj.Colors;
     
     spny    = obj.AxesMeta.spny;
     spi     = obj.AxesMeta.spi;
@@ -34,7 +34,7 @@ function showIntersection(obj)
     
     maskLinesInd 	= find(any(obj.Lines.Attributes{:,'track'} == lineIndices,2));
     nLines          = numel(maskLinesInd);
-    obj.LineHandles          = gobjects(nLines,1);
+    obj.LineHandles	= gobjects(spny,2*nLines);
     
         
     col     = 2;
@@ -44,9 +44,12 @@ function showIntersection(obj)
         XData               = lineData(:,1);
         YData               = lineData(:,2);
         for row = 1:spny
-            obj.LineHandles(spi(row,col),ln)	= plot(obj.AxesHandles(spi(row,col)),XData,YData,...
+            obj.LineHandles(spi(row,col),2*(ln - 1) + 2)	= plot(obj.AxesHandles(spi(row,col)),XData,YData,...
+                'LineWidth',    6,...
+                'Color',        'w');
+            obj.LineHandles(spi(row,col),2*(ln - 1) + 1)	= plot(obj.AxesHandles(spi(row,col)),XData,YData,...
                 'LineWidth',    2,...
-                'Color',        lineColor(ln,:));
+                'Color',        clr(ln,:));
         end
     end
 
@@ -68,4 +71,9 @@ function showIntersection(obj)
     
     % set 'isPicked' flag
     obj.Intersections.Attributes{obj.IntersectionOrder(intersection),'isPicked'} = true;
+    
+    % Clear status text
+    set(findobj(obj.TextHandles,'Tag','status'),...
+        'String',       '')
+    drawnow
 end

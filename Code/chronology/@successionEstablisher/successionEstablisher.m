@@ -35,23 +35,36 @@ classdef successionEstablisher < handle
         GraphHandles
         FigureHandles
         BackgroundAxisHandle
-        TitleHandle
+        TitleHandle = gobjects()
+        TextHandles = gobjects()
         AxesHandles
         AxesMeta
         RasterHandles
-        RasterData struct = struct('A',[],'X',[],'Y',[],'Alpha',[]);
+        RasterData struct = struct('A',[],'X',[],'Y',[],'Alpha',[],'AxesSubscripts',[]);
         LineHandles
         IntersectionHandles
         Digraph digraph = digraph()
     end
     properties (SetObservable)
-        CurrentIntersection double = 1 % Index of the intersection currently shown in the UI
+        CurrentIntersection double = 0 % Index of the intersection currently shown in the UI
         SelectedTrack double = 0 % Index of the track that is chosen to be on top for the current intersection
     end
     properties (Dependent, Hidden)
         NAxes
         NRaster
         NIntersections
+    end
+    properties (Constant, Hidden)
+        Colors = [...
+            0.3020    0.6863    0.2902
+            1.0000    0.4980         0
+            0         0         0
+            0.8       0.8       0.8]
+        ColorsTex = {...
+            '\color[rgb]{0.3020,0.6863,0.2902}'
+            '\color[rgb]{1.0000,0.4980,0}'
+            '\color[rgb]{0,0,0}'
+            '\color[rgb]{0.8,0.8,0.8}'}
     end
     methods
         function obj = successionEstablisher(lines,intersections,varargin)
@@ -95,12 +108,15 @@ classdef successionEstablisher < handle
         %
         %   Name-Value Pair Arguments
         %     BackgroundRaster - Backround raster data
-        %       struct('A',[],'X',[],'Y',[],'Alpha',[]) (default) | struct
+        %       struct('A',[],'X',[],'Y',[],'Alpha',[],'AxesSubscripts',[]) (default) | struct
         %         A struct holding background raster data. The following fields are
-        %         required 'A' (cell values), 'X' (x-coordinate),
-        %         'Y' (y-coordinate), 'Alpha' (transparency channel). 'A' and
+        %         required: 'A' (cell values), 'X' (x-coordinate),
+        %         'Y' (y-coordinate), 'Alpha' (transparency channel) and 
+        %         'AxesSubscripts' (nx2 row-col indices). 'A' and
         %         'Alpha' fields hold arrays of the same size. 'X' and 'Y' are
         %         vectors with lengths corresponding to the raster dimension sizes.
+        %         'AxesSubscripts' holds a list of row-col subscript pairs,
+        %         indicating, on which axis/axes to show the respective raster.
         %         Multiple rasters can be supplied as a non-scalar struct.
         %
         %     IntersectionOrder - UI intersection order
@@ -124,7 +140,7 @@ classdef successionEstablisher < handle
             
             % Parse Name-Value pairs
             optionName          = {'BackgroundRaster','IntersectionOrder','BufferDistance'}; % valid options (Name)
-            optionDefaultValue  = {struct('A',[],'X',[],'Y',[],'Alpha',[]),[],50}; % default value (Value)
+            optionDefaultValue  = {struct('A',[],'X',[],'Y',[],'Alpha',[],'AxesSubscripts',[]),[],50}; % default value (Value)
             [backgroundRaster,...
              intersectionOrder,...
              bufferDistance] = parseArgs(optionName,optionDefaultValue,varargin{:}); % parse function arguments
