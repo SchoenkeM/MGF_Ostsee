@@ -32,8 +32,10 @@ function initializeDigraph(obj)
     maskHasEdge     = topTrack ~= 0;
     edge            = topTrack(maskHasEdge);
     tmp             = topTrack == trackIds; % find the bottom track id
-    
-    edge(:,2)       = trackIds(~tmp & repmat(maskHasEdge,1,2));
+    [r,c]           = find(~tmp & repmat(maskHasEdge,1,2));
+    [r,ind]         = sort(r);
+    c               = c(ind);
+    edge(:,2)       = trackIds(sub2ind(size(trackIds),r,c));
     intersectionId  = obj.Intersections.Attributes{maskIsPicked,'intersection'}(maskHasEdge);
     
     % Create node table
