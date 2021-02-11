@@ -221,6 +221,14 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
                     % Save the changes to disk
                     waitForValidKey     = false;
                     SE.saveIntersections;
+                case 'o'
+                    % Toggle line overlay
+                    waitForValidKey     = false;
+                    if SE.Overlay
+                        SE.Overlay = false;
+                    else
+                        SE.Overlay = true;
+                    end
                 otherwise
                     % Continue waiting for a valid key press
             end

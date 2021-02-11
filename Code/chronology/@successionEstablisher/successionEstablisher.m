@@ -48,6 +48,7 @@ classdef successionEstablisher < handle
     properties (SetObservable)
         CurrentIntersection double = 0 % Index of the intersection currently shown in the UI
         SelectedTrack double = 0 % Index of the track that is chosen to be on top for the current intersection
+        Overlay logical = true % Switch if the line & intersection overlay is visible
     end
     properties (Dependent, Hidden)
         NAxes
@@ -160,6 +161,7 @@ classdef successionEstablisher < handle
             % Add property listeners
             addlistener(obj,'CurrentIntersection','PostSet',@successionEstablisher.handlePropertyChangeEvents);
             addlistener(obj,'SelectedTrack','PostSet',@successionEstablisher.handlePropertyChangeEvents);
+            addlistener(obj,'Overlay','PostSet',@successionEstablisher.handlePropertyChangeEvents);
             
             % Initialize the UI
             initializeFigure(obj)
@@ -179,6 +181,7 @@ classdef successionEstablisher < handle
         highlightSelection(obj)
         initializeDigraph(obj)
         addToDigraph(obj,intersection)
+        toggleOverlay(obj)
     end
     
     % Get methods
@@ -206,6 +209,8 @@ classdef successionEstablisher < handle
                     showIntersection(evnt.AffectedObject)
                 case 'SelectedTrack'
                     highlightSelection(evnt.AffectedObject)
+                case 'Overlay'
+                    toggleOverlay(evnt.AffectedObject)
             end
         end
     end
