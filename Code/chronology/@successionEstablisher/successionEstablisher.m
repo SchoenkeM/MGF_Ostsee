@@ -166,6 +166,9 @@ classdef successionEstablisher < handle
             initializeDigraph(obj)
         end
     end
+    methods
+        saveIntersections(obj)
+    end
     methods (Access = private)
         initializeFigure(obj)
         drawBackground(obj)

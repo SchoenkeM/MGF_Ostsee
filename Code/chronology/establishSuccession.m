@@ -220,7 +220,7 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
                 case 's'
                     % Save the changes to disk
                     waitForValidKey     = false;
-                    SE.Intersections.write;
+                    SE.saveIntersections;
                 otherwise
                     % Continue waiting for a valid key press
             end
