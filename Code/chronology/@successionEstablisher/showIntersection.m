@@ -5,19 +5,17 @@ function showIntersection(obj)
         'String',       'loading intersection ...')
     drawnow
     
-    try
-        delete(obj.LineHandles)
-        delete(obj.IntersectionHandles)
-    catch
-        
-    end
+    hLineBack   = findobj(obj.LineHandles,'Tag','LineBack');
+    hLineFront  = findobj(obj.LineHandles,'Tag','LineFront');
     
     intersection = obj.CurrentIntersection;
     
     clr     = obj.Colors;
     
     spny    = obj.AxesMeta.spny;
+    spnxr   = obj.AxesMeta.spnxr;
     spi     = obj.AxesMeta.spi;
+    spir    = obj.AxesMeta.spir;
     
     lineIndices         = obj.Intersections.Attributes{obj.IntersectionOrder(intersection),{'track','track_2'}};
 	intersectionData	= cat(2,obj.Intersections.Attributes.coordinates{:})';
@@ -34,34 +32,25 @@ function showIntersection(obj)
     
     maskLinesInd 	= find(any(obj.Lines.Attributes{:,'track'} == lineIndices,2));
     nLines          = numel(maskLinesInd);
-    obj.LineHandles	= gobjects(spny,2*nLines);
     
-        
-    col     = 2;
     for ln = 1:nLines
-        
+        maskLines   = cat(1,hLineBack.UserData) == ln;
         lineData            = squeeze(obj.Lines.Attributes.coordinates{maskLinesInd(ln)});
         XData               = lineData(:,1);
         YData               = lineData(:,2);
-        for row = 1:spny
-            obj.LineHandles(spi(row,col),2*(ln - 1) + 2)	= plot(obj.AxesHandles(spi(row,col)),XData,YData,...
-                'LineWidth',    6,...
-                'Color',        'w');
-            obj.LineHandles(spi(row,col),2*(ln - 1) + 1)	= plot(obj.AxesHandles(spi(row,col)),XData,YData,...
-                'LineWidth',    2,...
-                'Color',        clr(ln,:));
-        end
+        
+        set(hLineBack(maskLines),...
+            {'XData'},      {reshape(XData,1,[])},...
+            {'YData'},      {reshape(YData,1,[])})
+        set(hLineFront(maskLines),...
+            {'XData'},      {reshape(XData,1,[])},...
+            {'YData'},      {reshape(YData,1,[])})
     end
-
     XData   = intersectionData(obj.IntersectionOrder(intersection),1);
     YData   = intersectionData(obj.IntersectionOrder(intersection),2);
-
-	for row = 1:spny
-        obj.IntersectionHandles(spi(row,col),1) = scatter(obj.AxesHandles(spi(row,col)),XData,YData,50,...
-            'Marker',           'o',...
-            'MarkerFaceColor',  'w',...
-            'MarkerEdgeColor',  'k');
-	end
+    set(obj.IntersectionHandles,...
+            {'XData'},      {reshape(XData,1,[])},...
+            {'YData'},      {reshape(YData,1,[])})
 
     set(obj.AxesHandles(spi(1,1)),...
         'XLim',     XData + [-1 1].*obj.BufferDistance,...

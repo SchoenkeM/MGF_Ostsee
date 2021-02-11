@@ -173,6 +173,7 @@ classdef successionEstablisher < handle
         initializeFigure(obj)
         drawBackground(obj)
         zoomToRaster(obj)
+        initializeLines(obj)
         showIntersection(obj)
         delete(obj)
         highlightSelection(obj)

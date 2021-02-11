@@ -21,8 +21,8 @@ function initializeDigraph(obj)
     end
     
     row = 1;
-    col = 3;
-    
+    col = obj.AxesMeta.spnx;
+        
     % Focus on the intersections that have been looked at
     maskIsPicked    = obj.Intersections.Attributes{:,'isPicked'};
     trackIds        = obj.Intersections.Attributes{maskIsPicked,{'track','track_2'}};

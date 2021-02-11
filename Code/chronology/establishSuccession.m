@@ -57,7 +57,7 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
         rasterPaths = cellstr(rasterPaths);
     end
     nRaster                     = numel(rasterPaths);
-    defaultRasterAxesSubscripts	= arrayfun(@(rr) [rr 1;rr 2],1:nRaster,'un',0)';
+    defaultRasterAxesSubscripts	= (1:nRaster)';
     
     % Parse Name-Value pairs
     optionName          = {'ResetIntersections','RasterAxesSubscripts'}; % valid options (Name)
@@ -142,7 +142,7 @@ function establishSuccession(intersetionsPath,linesPath,rasterPaths,varargin)
         raster(rr).A(raster(rr).Alpha)	= NaN; 
         
         % Asign AxesSubscripts
-        raster(rr).AxesSubscripts       = rasterAxesSubscripts{rr};
+        raster(rr).AxesSubscripts       = rasterAxesSubscripts(rr);
     end
     
     % Generate data for prioritization

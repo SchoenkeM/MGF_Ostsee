@@ -6,7 +6,7 @@ clear
 
 % Decide if the intersection attribute table should be reset to its
 % original form (topTrack, etc. columns are then removed).
-ResetFlag   = true;
+ResetFlag   = false;
 
 % Define filepaths
 rootFolder          = '/Users/David/Dropbox/David/university/PostDoc/ressoruces/GIS/MGF Ostsee/';
@@ -17,7 +17,7 @@ rasterPaths       	= dir(rasterPath);
 rasterPaths         = fullfile({rasterPaths.folder},{rasterPaths.name})';
 rasterPaths         = rasterPaths(~cellfun(@isempty,regexp(rasterPaths,'rendered\.tif$')));
 
-rasterAxesSubscripts    = {[1 1;1 2];[2 1;2 2];[3 1;3 2];[1 1;1 2];[2 1;2 2];[3 1;3 2]};
+rasterAxesSubscripts    = [1:3,1:3]';
 
 % Create establishSuccession handle
 establishSuccession(intersetionsPath,linesPath,rasterPaths,...

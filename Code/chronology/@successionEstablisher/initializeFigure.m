@@ -7,12 +7,13 @@ function initializeFigure(obj)
         'Units',        'normalized',...
         'Position',     [0.5 0 0.5 1])
     
-    nRows 	= max(cat(1,obj.RasterData.AxesSubscripts));
-    nRows   = nRows(1);
+    nRaster	= max(cat(1,obj.RasterData.AxesSubscripts));
     
-    spnx  	= 3;
-    spny 	= nRows;
+    spnxr  	= ceil(sqrt(nRaster));
+    spny 	= ceil(nRaster/spnxr);
+    spnx    = spnxr + 1;
     spi     = reshape(1:spnx*spny,spnx,spny)';
+    spir    = spi(1:spny,1:spnxr);
     
     header  = 0.1; % In normalized units
     
@@ -60,7 +61,7 @@ function initializeFigure(obj)
         end
     end
     row = 1;
-    col = 3;
+    col = spnx;
     position    = [(col - 1)/spnx,...
                    0,...
                    1/spnx,...
@@ -76,17 +77,20 @@ function initializeFigure(obj)
         hsp(spi(row,col)) = hsp(spi(1,col));
     end
     
-    hfig.UserData       = linkprop(reshape(hsp(spi(1:spny,1:2)),[],1),{'XLim','YLim'});
+    hfig.UserData       = linkprop(reshape(hsp(spi(1:spny,1:spnxr)),[],1),{'XLim','YLim'});
     
     % Assign variables to obj properties
 	obj.AxesMeta        = struct;
     obj.AxesMeta.spnx  	= spnx;
+    obj.AxesMeta.spnxr 	= spnxr;
     obj.AxesMeta.spny 	= spny;
     obj.AxesMeta.spi	= spi;
+    obj.AxesMeta.spir	= spir;
     obj.FigureHandles   = hfig;
     obj.AxesHandles     = hsp;
     
     drawBackground(obj)
+    initializeLines(obj)
     initializeDigraph(obj)
     zoomToRaster(obj)
     

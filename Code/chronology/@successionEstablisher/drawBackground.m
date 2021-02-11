@@ -6,14 +6,22 @@ function drawBackground(obj)
     drawnow
 
     spnx    = obj.AxesMeta.spnx;
+    spnxr   = obj.AxesMeta.spnxr;
     spny    = obj.AxesMeta.spny;
     spi     = obj.AxesMeta.spi;
+    spir    = obj.AxesMeta.spir;
+    iir     = reshape(1:numel(spir),size(spir,2),size(spir,1))';
     
     % Plot raster on all axes
     for row = 1:spny
-        for col = 1:spnx
-            rasterInd   = find(cellfun(@(rr) any(ismember(rr,[row,col],'rows')),{obj.RasterData.AxesSubscripts}'));
+        for col = 1:spnxr
+            rasterInd   = find(cat(1,obj.RasterData.AxesSubscripts) == iir(row,col));
             nRaster     = numel(rasterInd);
+            if nRaster == 0
+                set(obj.AxesHandles(spi(row,col)),...
+                    'Visible',      'off')
+                continue
+            end
             for rr = 1:nRaster
                 switch size(obj.RasterData(rasterInd(rr)).A,3)
                     case 4 % Alpha channel - rendered image
